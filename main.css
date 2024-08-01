@@ -1,0 +1,163 @@
+/*  */
+:root{
+  --mobile-width: 23.4375em;
+  --tablet-width: 37.5em;
+  --desktop-width: 60em;
+
+
+  --clr-primary-lime: hsl(61, 70%, 52%);
+  --clr-primary-red: hsl(4, 69%, 50%);
+  
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  
+  --clr-slate-100: hsl(202, 86%, 94%);
+  --clr-slate-300: hsl(203, 41%, 72%);
+  --clr-slate-500: hsl(200, 26%, 54%);
+  --clr-slate-700: hsl(200, 24%, 40%);
+  --clr-slate-900: hsl(202, 55%, 16%);
+  
+  --ff-jakarta: "Plus Jakarta Sans", sans-serif;
+  
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf), 
+        url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf),
+        url(./assets/fonts/static/PlusJakartaSans-Bold.ttf),
+        url(./assets/fonts/static/PlusJakartaSans-Medium.ttf);
+}
+/* Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* utitlity classes */
+
+.flow-content > * + *{
+  margin-top: var(--spacer, 1em);
+}
+
+.xs-spacer{
+  --spacer: 0.5em;
+}
+
+.l-spacer{
+  --spacer: 2em;
+}
+
+.split {
+  display: flex;
+}
+
+/* general styling */
+
+body{
+  font-family: var(--ff-jakarta);
+  font-size: var(--fs-400);
+  background-color: var(--clr-slate-100);
+}
+
+
+h1{
+  font-size:var(--fs-500);
+  color:var(--clr-slate-900);
+  font-weight: var(--fw-700);
+  line-height: 1.25;
+}
+
+button{
+  border:none;
+}
+
+input{
+  display: block;
+  width: 100%;
+}
+
+.title button{
+  background-color: transparent;
+  padding:0;
+  text-decoration: underline;
+}
+
+
+
+.container{
+  background-color: greenyellow;
+  max-width: 63rem;
+  margin-inline: auto;
+} 
+
+.calculator{
+  padding: 2rem 1.5rem;
+  background-color: var(--clr-neutral-white);
+  color:var(--clr-slate-700);
+
+}
+
+.title{
+  flex-direction: column;
+  align-items: start;
+}
+
+@media (min-width: 37.5em) {
+  body{
+    padding: 2em;
+  }
+
+  .container{
+    border-radius: 1.5rem;
+  }
+
+  .calculator{
+
+  }
+}
+
+
+
+
+
+
+
+/* Footer style */
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
