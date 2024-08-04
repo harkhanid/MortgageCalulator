@@ -11,80 +11,79 @@
 </head>
 <body>
   <div class="container">
-    <div class="calculator flow-content l-spacer">
-      <div class="title split flow-content xs-spacer">
+    <div class="calculator border-radius-top inner-container flow-content l-spacer">
+      <div class="title  split flow-content xs-spacer">
         <h1>Mortgage Calculator</h1>
         <button>Clear All</button>  
       </div>
       <form action="" class="flow-content">
-        <label for="amount">Mortgage Amount</label>
-        <input type="text" name="amount"  id="amount"/>
-        <div class="split">
-          <div>
-            <label for="term"> Mortgage Term</label>
-            <input type="text" name="term" id="term">
-          </div>
-          <div>
-            <label for="rate"> Interest Rate</label>
-            <input type="text" name="rate" id="rate">
+        <div class="flow-content xs-spacer">
+          <label for="amount">Mortgage Amount</label>
+          <div class="input-container split">
+            <p class="border-radius-left">&#163;</p>
+            <input type="text" name="amount"  id="amount" class="border-radius-right" >
           </div>
         </div>
-        <fieldset>
+        <div class="split input-split l-spacer">
+          <div class="flow-content xs-spacer">
+            <label for="term"> Mortgage Term</label>
+            <div class="input-container split">
+              <input type="text" name="term" id="term" class="border-radius-left"> 
+              <p class="border-radius-right">years</p>
+            </div>
+          </div> 
+           <div class="flow-content">
+            <label for="rate"> Interest Rate</label>
+            <div class="input-container split xs-spacer">
+              <input type="text" name="rate" id="rate" class="border-radius-left">
+              <p class="border-radius-right">%</p>
+            </div>
+          </div>
+        </div>
+        <fieldset class="flow-content">
           <legend>Mortgage type</legend>
-          <input type="radio" id="repayment" name="type" value="repayment">
-          <label for="repayment">Repayment</label>
-          <input type="radio" id="interest" name="type" value="interest">
-          <label for="interest">Repayment</label>
+          <div class="radio-btn input-container xs-spacer">
+            <input type="radio" id="repayment" name="type" value="repayment">
+            <label for="repayment">Repayment</label>  
+          </div>
+          <div class="radio-btn input-container xs-spacer">
+            <input type="radio" id="interest" name="type" value="interest">
+            <label for="interest">Interest Only</label>
+          </div>
         </fieldset>
 
-        <button>Calculate repayments</button>
+        <button class="calculate-btn">
+         <span>
+          Calculate repayments</span></button>
       </form>
     </div>
-    <div  class="result">
-      <div class="before-result">
+    <div  class="result border-radius-bottom inner-container">
+      <!-- <div class="before-result flow-content">
         <img src="assets/images/illustration-empty.svg" />
-        <p class="result-title">Results shown here</p>
+        <h2 class="result-title">Results shown here</h2>
         <p>
           Complete the form and click “calculate repayments” to see what
           your monthly repayments would be.
         </p>
+      </div> -->
+
+      <div class="after-result flow-content">
+        <h2 class="result-title">Your results</h2>
+        <p>
+          Your results are shown below based on the information you provided.
+          To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+        <div class="result-card">
+          <div class="inner-card flow-content fxs-spacer">
+          <p>Your monthly repayments</p>
+          <p class="monthly-result"> &#163;4563</p>
+          <hr>
+           <p> Total you'll repay over the term</p>
+          <p class="total-pending">&#163;1111111</p>
+        </div>
+        </div> 
       </div>
     </div>
-    <div class="after-result">
-      <div class="result-title">Your results</div>
-
-      <p>
-        Your results are shown below based on the information you provided.
-        To adjust the results, edit the form and click “calculate repayments” again.
-      </p>
-      <div class="result-card">
-        <p>Your monthly repayments</p>
-        <p class="monthly-result"></p>
-         <p> Total you'll repay over the term</p>
-        <p class="total-pending"></p>
-        </div> 
-    </div>
   </div>
- 
-
-  
-
-
-
-  <!-- Empty results start -->
-
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-
-
-  <!-- Completed results end -->
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 </html>
