@@ -11,53 +11,53 @@
 </head>
 <body>
   <div class="container">
-    <div class="calculator border-radius-top inner-container flow-content l-spacer">
-      <div class="title  split flow-content xs-spacer">
-        <h1>Mortgage Calculator</h1>
-        <button>Clear All</button>  
-      </div>
-      <form action="" class="flow-content">
-        <div class="flow-content xs-spacer">
-          <label for="amount">Mortgage Amount</label>
-          <div class="input-container split">
-            <p class="border-radius-left">&#163;</p>
-            <input type="text" name="amount"  id="amount" class="border-radius-right" >
+    <div class="calculator  inner-container flow-content l-spacer">
+      <form action="" id="form" class="flow-content">
+        <div class="title  split flow-content xs-spacer">
+          <h1>Mortgage Calculator</h1>
+          <button class="clr-btn">Clear All</button>  
+        </div>
+        <div class="flow-content l-spacer">
+          <label for="amount" class="xs-spacer">Mortgage Amount</label>
+          <div class="input-container split xs-spacer">
+            <p class="inputtext border-radius-left">&#163;</p>
+            <input type="text" name="amount"  id="amount" class="border-radius-right">
           </div>
         </div>
         <div class="split input-split l-spacer">
           <div class="flow-content xs-spacer">
             <label for="term"> Mortgage Term</label>
             <div class="input-container split">
-              <input type="text" name="term" id="term" class="border-radius-left"> 
-              <p class="border-radius-right">years</p>
+              <input type="text" name="term" id="term" class="border-radius-left" > 
+              <p class="inputtext border-radius-right">years</p>
             </div>
           </div> 
            <div class="flow-content">
             <label for="rate"> Interest Rate</label>
             <div class="input-container split xs-spacer">
               <input type="text" name="rate" id="rate" class="border-radius-left">
-              <p class="border-radius-right">%</p>
+              <p class="border-radius-right inputtext">%</p>
             </div>
           </div>
         </div>
         <fieldset class="flow-content">
           <legend>Mortgage type</legend>
           <div class="radio-btn input-container xs-spacer">
-            <input type="radio" id="repayment" name="type" value="repayment">
+            <input type="radio" id="repayment" name="type" value="repayment" >
             <label for="repayment">Repayment</label>  
           </div>
           <div class="radio-btn input-container xs-spacer">
-            <input type="radio" id="interest" name="type" value="interest">
+            <input type="radio" id="interest" name="type" value="interest" >
             <label for="interest">Interest Only</label>
           </div>
         </fieldset>
 
-        <button class="calculate-btn">
+        <button type="submit" class="calculate-btn">
          <span>
           Calculate repayments</span></button>
       </form>
     </div>
-    <div  class="result border-radius-bottom inner-container">
+    <div  class="result  inner-container">
       <!-- <div class="before-result flow-content">
         <img src="assets/images/illustration-empty.svg" />
         <h2 class="result-title">Results shown here</h2>
@@ -76,14 +76,15 @@
         <div class="result-card">
           <div class="inner-card flow-content fxs-spacer">
           <p>Your monthly repayments</p>
-          <p class="monthly-result"> &#163;4563</p>
+          <p class="monthly-result"> &#163; <span id="monthly-result"></span></p>
           <hr>
            <p> Total you'll repay over the term</p>
-          <p class="total-pending">&#163;1111111</p>
+          <p class="total-pending">&#163;<span id="total-pending"></span></p>
         </div>
         </div> 
       </div>
     </div>
   </div>
 </body>
+<script src="index.js" ></script>
 </html>
