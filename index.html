@@ -15,59 +15,62 @@
       <form action="" id="form" class="flow-content">
         <div class="title  split flow-content xs-spacer">
           <h1>Mortgage Calculator</h1>
-          <button class="clr-btn">Clear All</button>  
+          <button type="reset" class="clr-btn" onclick="clearFn()">Clear All</button>  
         </div>
         <div class="flow-content l-spacer">
           <label for="amount" class="xs-spacer">Mortgage Amount</label>
-          <div class="input-container split xs-spacer">
+          <div id="amount-container" class="input-container split xs-spacer">
             <p class="inputtext border-radius-left">&#163;</p>
-            <input type="text" name="amount"  id="amount" class="border-radius-right">
+            <input type="text" name="amount"  id="amount" class="border-radius-right" onfocus="focusFn('amount')">
           </div>
+          <p class="error-message xs-spacer"></p>
         </div>
         <div class="split input-split l-spacer">
           <div class="flow-content xs-spacer">
             <label for="term"> Mortgage Term</label>
-            <div class="input-container split">
-              <input type="text" name="term" id="term" class="border-radius-left" > 
+            <div id="term-container" class="input-container split">
+              <input type="text" name="term" id="term" onfocus="focusFn('term')" class="border-radius-left" > 
               <p class="inputtext border-radius-right">years</p>
             </div>
+            <p class="error-message xs-spacer"></p>
           </div> 
            <div class="flow-content">
             <label for="rate"> Interest Rate</label>
-            <div class="input-container split xs-spacer">
-              <input type="text" name="rate" id="rate" class="border-radius-left">
+            <div id="rate-container" class="input-container split xs-spacer">
+              <input type="text" name="rate" onfocus="focusFn('rate')" id="rate" class="border-radius-left">
               <p class="border-radius-right inputtext">%</p>
             </div>
+            <p class="error-message xs-spacer"></p>
           </div>
         </div>
-        <fieldset class="flow-content">
+        <fieldset id="type-container" class="flow-content">
           <legend>Mortgage type</legend>
           <div class="radio-btn input-container xs-spacer">
-            <input type="radio" id="repayment" name="type" value="repayment" >
-            <label for="repayment">Repayment</label>  
+            <label for="repayment"><input type="radio" id="repayment" name="type" value="repayment" onfocus="focusFn('type')">
+              Repayment</label>  
           </div>
-          <div class="radio-btn input-container xs-spacer">
-            <input type="radio" id="interest" name="type" value="interest" >
-            <label for="interest">Interest Only</label>
+          <div class="radio-btn input-container xs-spacer">  
+            <label for="interest"> <input type="radio" id="interest" name="type" value="interest" onfocus="focusFn('type')"> Interest Only</label>
           </div>
         </fieldset>
+        <p class="error-message xs-spacer"></p>
 
         <button type="submit" class="calculate-btn">
          <span>
           Calculate repayments</span></button>
       </form>
     </div>
-    <div  class="result  inner-container">
-      <!-- <div class="before-result flow-content">
+    <div  class="result  inner-container show">
+      <div id="before-result" class="before-result flow-content">
         <img src="assets/images/illustration-empty.svg" />
         <h2 class="result-title">Results shown here</h2>
         <p>
           Complete the form and click “calculate repayments” to see what
           your monthly repayments would be.
         </p>
-      </div> -->
+      </div>
 
-      <div class="after-result flow-content">
+      <div id="after-result" class="after-result flow-content hide">
         <h2 class="result-title">Your results</h2>
         <p>
           Your results are shown below based on the information you provided.

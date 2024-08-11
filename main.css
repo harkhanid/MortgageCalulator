@@ -19,7 +19,7 @@
   --clr-slate-900: hsl(202, 55%, 16%);
   
   --ff-jakarta: "Plus Jakarta Sans", sans-serif;
-  
+  --fs-300: 0.875rem;
   --fs-400: 1rem;
   --fs-500: 1.125rem;
   --fs-600: 1.5rem;
@@ -55,6 +55,10 @@ figure {
   margin: 0;
 }
 
+label{
+  display: block;
+}
+
 h2{
   color:var(--clr-neutral-white);
   font-size: var(--fs-600);
@@ -78,6 +82,14 @@ select {
 
 .flow-content > * + *{
   margin-top: var(--spacer, 1em);
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
 }
 
 .fxs-spacer{
@@ -341,10 +353,26 @@ body{
   }
 }
 
+.error-container .inputtext{
+  background-color: var(--clr-primary-red);
+  color:var(--clr-neutral-white);
+}
+
+.error-container{
+  border: 1px solid var(--clr-primary-red);
+}
+
+.error-message{
+  color: var(--clr-primary-red);
+  font-size: var(--fs-300);
+}
+
 
 .result{
   background-color: var(--clr-slate-900);
   color: var(--clr-slate-300);
+  display: flex;
+  align-items: center;
   flex-basis: 100%;
   min-width: 0;
 }
@@ -374,7 +402,6 @@ body{
 }
 
 .result-card{
-  /* background-color: var(--clr-primary-lime); */
   padding-top:4px;
 }
 
